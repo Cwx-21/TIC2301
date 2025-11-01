@@ -1,11 +1,11 @@
 # TIC2301 Project
 
 # Contributing Members:
-Emonda Wong
+**Emonda Wong**
 <br/>
-Cheng Wei Xian
+**Cheng Wei Xian**
 <br/>
-Chan Zi Yee
+**Chan Zi Yee**
 
 # About this Project
 
@@ -62,7 +62,7 @@ qpdf --password=Password123 --decrypt ${fileToBeDecrypted} ${fileToDecryptTo}
 
 ## Wireshark
    After submitting the form in the HTML server, wireshark would have captured the packet. To make life easier, you can filter the packets by different requests like "HTTP", "tcp.port == 8080", to only see the packets you are interested in.
-   The submitted form would be under a POST request. <br/>
+   The submitted form would be under a POST request. <br/><br/>
    In order to download the files, <br/>
    navigate to File -> Export Objects -> HTTP and download the file with the largest file size. This would be the pdf file that we have uploaded. 
    <br/><br/>
