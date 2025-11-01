@@ -7,10 +7,11 @@ Cheng Wei Xian
 <br/>
 Chan Zi Yee
 
-
-# How the project works
+# About this Project
 
 This project showcases a man in the middle attack using the help of a html server and the wireshark tool. In a real world setting, the attack may be way more complex than this. This project serves to provide a simple, dumb-down version of the attack.
+<br/>
+The flow of this project consists of encrypting a pdf file, uploading it through the html server, sniffing the files with wireshark, decrypting the file to get the raw files itself.
 
 # Getting Started
 
@@ -58,3 +59,14 @@ qpdf --password=Password123 --decrypt ${fileToBeDecrypted} ${fileToDecryptTo}
 ```
 
   There's a password file and a normal pdf file for testing purposes in this repository
+
+## Wireshark
+   After submitting the form in the HTML server, wireshark would have captured the packet. To make life easier, you can filter the packets by different requests like "HTTP", "tcp.port == 8080", to only see the packets you are interested in.
+   The submitted form would be under a POST request. <br/>
+   In order to download the files, <br/>
+   navigate to File -> Export Objects -> HTTP and download the file with the largest file size. This would be the pdf file that we have uploaded. 
+   <br/><br/>
+   To read the password file, <br/>
+   right click the POST packet -> Follow -> HTTP stream. This provides all the content for the http webpage itself, which happens to contain the password file as well. 
+
+
