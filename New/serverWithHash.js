@@ -51,6 +51,15 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(PORT, "127.0.0.1", () => {
-  console.log(`Server running at http://127.0.0.1:${PORT}`);
+const https = require("https");
+const fs = require("fs");
+
+const options = {
+  key: fs.readFileSync("certs/key.pem"),
+  cert: fs.readFileSync("certs/cert.pem"),
+};
+
+// Start HTTPS server
+https.createServer(options, app).listen(PORT, "127.0.0.1", () => {
+  console.log(`✅ HTTPS server running at https://127.0.0.1:${PORT}`);
 });
