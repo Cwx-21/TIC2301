@@ -1,4 +1,4 @@
-# TIC2301 Project
+# TIC2301 Project: Wireshark Analysis
 
 # Contributing Members:
 **Emonda Wong**
